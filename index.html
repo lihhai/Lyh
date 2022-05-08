@@ -2,233 +2,44 @@
 <html>
 
 <head>
-	<title>Linh</title>
-	<link rel="icon" type="image/x-icon" href="html folder/linh.ico">
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/lihhai/Lyh/main/styles.css">
-	<!--=======ĐỊNH DẠNG STYLE Ở CÁC TAB===========-->
-	<style>
-		.city {
-			background-color: rgb(230, 152, 19);
-			color: white;
-			border: 2px solid rgb(85, 48, 48);
-			margin: 20px;
-			padding: 20px;
-		}
-	</style>
+    <style>
+        #snowflakeContainer{position:absolute;left:0px;top:0px;}
+        .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+        .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='textjavascript'>
+        //<![CDATA[
+        var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+        //]]>
+    </script>
+    <title>Linh</title>
+    <link rel="icon" type="image/x-icon" href="html folder/linh.ico">
+    <link rel="stylesheet" href="styles.css">
+    <header>
+        <div class="overlay">
+            <h1>NATURAL OF VIETNAM</h1>
+            <h3>Cảnh đẹp Việt Nam </h3>
+            <p>Thiên nhiên luôn chứa đựng những điều kỳ bí đem đến sức hút lạ thường khiến con người luôn muốn đặt chân
+                đến khám phá những điều diệu kỳ ẩn sâu bên trong. Nhắc đến vẻ đẹp thiên nhiên, chẳng cần đi đâu xa, ngay
+                trên mảnh đất hình chữ S thân thương nơi được mệnh danh là “rừng vàng biển bạc” với của non sông hùng vĩ
+                cũng đã đem đến vô vàn điều thú vị. Đừng bỏ lỡ cơ hội ngắm nhìn những hình ảnh đẹp của thiên nhiên Việt
+                Nam, chinh phục những vùng đất mới, thả hồn phiêu du theo những miền ký ức, cảm nhận vẻ đẹp tinh khiết
+                nhất của đất trời để rồi chúng ta lại thêm yêu và tự hào về Việt Nam tươi đẹp
+            </p>
+        </div>
+    </header>
 </head>
-
-<body style="background-color:#C1CDCD">
-
-	<h1 style="text-align:center;font-size:70px;font-family:Calibri">Tiêu đề trang web </h1>
-	<h2 id="C4">Chapter 4</h2>
-	<h2 style="border:2px solid Dodgerblue;padding:30px;font-family:Segoe Print;font-size:50px">Chị em Thúy Kiều
-		<p>
-			<pre style="text-align:left;font-size:40px;font-family:Times New Roman">
-                   Nguyễn Du
-Ngập ngừng mép núi quanh co
-Lưng đèo quán dựng, mưa lò mái ngang...
-Vi vu gió hút nẻo vàng.
-Một trời thu rộng mấy hàng mây nao.
-Dừng cương nghỉ ngựa non cao
-Dặm xa lữ thứ kẻ nào héo hon...
-Đi rồi, khuất ngựa sau non;
-Nhỏ thưa tràng đạc, tiếng còn tịch liêu...
-Trơ vơ buồn lọt quán chiều
-Mái nghiêng nghiêng gửi buồn theo hút người.
-</pre>
-		</p>
-	</h2>
-	<hr>
-	< style="text-align:center;font-size:40px">
-		<mark>Phương trình <small>bậc hai:</small></mark>
-		ax<sup>2</sup>+bx+c=0  
-		<br>
-		<mark>Công thức hóa học </mark>    
-		H<sub>2</sub>+O<sub>2</sub>&rarr;H<sub>2</sub>O
-		<br>
-		<a href="http://husc.hueuni.edu.vn/" target="_blank">Khối chuyên </a>
-		<br>
-		<a href="/meo.jpg" target="_blank">html folder</a>
-		<button onclick="document.location='/meo.jpg'">html folder</button>
-		<br>
-
-		<a href="mailto:nguyenthuctolinh@gmail.com">Send email for me</a>
-		<h1>Chương 1</h1>
-		<h1>Chương 2</h1>
-		<h1>Chương 3</h1>
-		<h1>Chương 4</h1>
-		<h1>Chương 5</h1>
-		<h1>Chương 6</h1>
-		<a href=#C4 style="font-size:20pt">Đi đến bài thơ</a>
-		<!--<img src="html folder/meo.jpg" alt=" Ảnh mèo" width=500;height=450>
-<img src="https://vuonhoaphatgiao.com/uploads/noidung/images/goc_suy_ngam/hoang-hon-dep.jpg" alt="Hoàng hôn">-images
-<img src="html folder/hinh-anh-dong-dep-ve-thien-nhien_052410805.gif" alt="Ảnh động" style="width:300px;height:250px;">-->
-		<img src="html folder/workplace.jpg" alt="Ảnh máy tính" usemap="#workmap" width="400" height="379">
-		<map name="workmap">
-			    <area target="_blank" alt="computer" href="html folder/mac.jpg" coords="29,36,279,359" shape="rect">
-			    <area target="_blank" alt="phone" href="html folder/cellphone.jpg" coords="337,251,288,170"
-				shape="rect">
-			    <area target="_blank" alt="coffee" href="html folder/coffee.jpg" coords="345,303,58" shape="circle">
-		</map>
-		<!-- ===================table======================= -->
-		<table style="font-size:35px" ;>
-			<tr style="background-color:#556B2F">
-				<th>Họ và tên</th>
-				<th>Lớp</th>
-				<th>Điểm</th>
-			</tr>
-			<tr>
-				<td>Nguyễn Thúc Tố Linh</td>
-				<td>11t2</td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>Nguyễn Văn A</td>
-				<td>11t1</td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>Ngô Văn B</td>
-				<td>văn</td>
-				<td>7</td>
-			</tr>
-
-		</table>
-		<br>
-
-		<table style="width:100%">
-			<caption> <b>DANH SÁCH LỚP</b> </caption>
-			<tr style="padding:0;margin:0">
-				<th style="width:5rem;padding:0;margin:0;"> STT </th>
-				<th style="background-color:yellow">Họ và tên </th>
-				<th>Lớp</th>
-				<th>Môn học</th>
-			</tr>
-			<tr style="padding:0;margin:0">
-				<td style="text-align:center"> 1</td>
-				<td style="height:80px">Nguyễn Thúc Tố Linh </td>
-				<td style="text-align:center">11ct2</td>
-				<td>Hóa học</td>
-			</tr>
-			<tr style="padding:0;margin:0">
-				<td style="text-align:center"> 2</td>
-				<td style="height:80px">Hồ Thị Tố Uyên </td>
-				<td style="text-align:center">11ct2</td>
-				<td>Hóa học</td>
-			</tr>
-		</table>
-		<br>
-		<table style="width:100%">
-			<colgroup>
-				<col span="3" style="background-color: #FFA07A">
-				<col span="1" style="background-color: #A52A2A">
-			</colgroup>
-			<tr>
-				<th colspan="7" style="height:50px">THỜI KHÓA BIỂU</th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>Thứ hai</th>
-				<th>Thứ ba</th>
-				<th>Thứ tư</th>
-				<th>Thứ năm</th>
-				<th>Thứ sáu</th>
-				<th>Thứ bảy</th>
-			</tr>
-			<tr>
-				<th>7:00</th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>7:50</th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>8:40</th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>9:25</th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<th>10:20</th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-		<!-- ===================Danh sách======================= -->
-		<h2>Danh sách không có thứ tự</h2>
-
-		<ul style="color: #FFA07A;">
-			<li>Toán</li>
-			<li>Văn</li>
-			<li>Tin</li>
-		</ul>
-		<h2>Danh sách có thứ tự</h2>
-		<ol style="color: rgba(255, 127, 187, 0.586);">
-			<li>Toán</li>
-			<li>Văn</li>
-			<li>Tin</li>
-		</ol>
-		<div style="background-color:rgba(8, 228, 169, 0.553);color:white;padding:20px;">
-			<h2>Cấp độ khối văn bản</h2>
-			<p>Khối văn bản theo tag <span style="color:chocolate;font-weight:bold;font-size: 50px;">"p"</span></p>
-		</div>
-		<!-- ===================lớp style các dạng=================== -->
-		<div class="city">
-			<h2>Huế</h2>
-			<p>Huế là thủ đô của đất nước Việt Nam </p>
-		</div>
-
-		<div class="city">
-			<h2>Paris</h2>
-			<p>Paris is the capital of France.</p>
-		</div>
-
-		<div class="city">
-			<h2>Tokyo</h2>
-			<p>Tokyo is the capital of Japan.</p>
-		</div>
-		</class>
-		<h2 class="city">Paris</h2>
-		</class>
-</body>
-
-</html>
+<h2>SAPA</h2>
+<p style="font-family:'Dancing Script', cursive; font-size:30px; margin-bottom: 30px;">Sapa mùa tuyết rơi</p>
+<p
+    style="background-image:url('https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/11/869761/Tuyet-1.jpg'),;">
+    Vào màu đông, khi nhiệt độ xuống thấp, có khi xuống tận độ âm, cảnh sắc Sa Pa lại được bảo phủ bởi bông tuyết trắng
+    xoá khắp mọi nẻo đường, dưới ánh nắng dịu nhẹ toả sáng lung linh, ngắm nhìn Sa Pa vào mùa đông ta lại như lạc vào
+    vùng đất ở Châu Âu thu nhỏ. Đây cũng là nơi duy nhất có tuyết rơi ở Việt Nam. Nếu bạn muốn “săn tuyết” không cần
+    phải bay đến tận nước ngoài xa xôi, ngay tại Sa Pa bạn cũng có thể ngắm nhìn cảnh tượng tuyệt vời của thiên nhiên,
+    trong cái lạnh run của khí trời chẳng làm bạn khó chịu, ngược lại nó sẽ khiến bạn bối rối xen lẫn một chút thích thú
+    khó tả.
+</p>
