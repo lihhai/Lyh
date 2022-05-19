@@ -9,66 +9,92 @@ body {
   background-image: linear-gradient(to right, rgba(35, 131, 227, 0.681), rgba(237, 67, 214, 0.73));
 }
 
-header {
-  background: url('https://wall.vn/wp-content/uploads/2020/04/hinh-anh-dep-hoi-an-4.jpg');
-  text-align: center;
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-attachment: fixed;
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 250;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #eee;
+}
+
+.header {
+  height: 90vh;
+  background-image: 
+  linear-gradient(to right bottom, 
+   rgba(76, 216, 255, 0.8),
+   rgba(30, 108, 217, 0.8)),
+   url('https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg');
+  
+background-size: cover;
+  background-position: top;
   position: relative;
-  overflow: hidden;
-  border-radius: 0 0 85% 85% / 30%;
-  background-attachment: fixed;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-header .overlay {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-  color: #FFF;
-  text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
-  padding-bottom: 10rem;
-
+.brand-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
 
-.overlay h3 {
-  font-size: 2rem;
-  padding-top: 1rem;
-}
+.brand { font-size: 20px; }
 
-.overlay p {
-  font-size: 1.5rem;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 5rem;
-}
-
-h2 {
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-family: 'Dancing Script';
-  font-size: 30px;
-  margin-bottom: 30px;
-  display: inline-block;
-  font: bold 4.5em/1.5 Bebas, sans-serif;
-  color: #5CA17C;
-  font-size: 72px;
-  text-transform: uppercase;
-  background-image: linear-gradient(to bottom, #26BDA6, #FF9F65, #DED37E, #26BDA6);
-  background-size: auto 150%;
-  transition: background-position 0.5s;
-  -webkit-text-fill-color: transparent;
-  line-height: 100px;
-  background-position: 0 100%;
 }
 
-h2:hover {
-  background-position: 0 0;
-  cursor: pointer;
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  margin-bottom: 30px;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 7.4px;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+font-size: 14px;
 }
 
 h3,
@@ -77,141 +103,6 @@ p {
   margin-bottom: 30px;
   line-height: 30px;
 }
-
-
-@-webkit-keyframes snowflakes-fall {
-  0% {
-    top: -10%
-  }
-
-  100% {
-    top: 100%
-  }
-}
-
-@-webkit-keyframes snowflakes-shake {
-  0% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px)
-  }
-
-  50% {
-    -webkit-transform: translateX(80px);
-    transform: translateX(80px)
-  }
-
-  100% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px)
-  }
-}
-
-@keyframes snowflakes-fall {
-  0% {
-    top: -10%
-  }
-
-  100% {
-    top: 100%
-  }
-}
-
-@keyframes snowflakes-shake {
-  0% {
-    transform: translateX(0px)
-  }
-
-  50% {
-    transform: translateX(80px)
-  }
-
-  100% {
-    transform: translateX(0px)
-  }
-}
-
-.snowflake {
-  color: #fff;
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
-  -webkit-animation-duration: 10s, 3s;
-  -webkit-animation-timing-function: linear, ease-in-out;
-  -webkit-animation-iteration-count: infinite, infinite;
-  -webkit-animation-play-state: running, running;
-  animation-name: snowflakes-fall, snowflakes-shake;
-  animation-duration: 10s, 3s;
-  animation-timing-function: linear, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  animation-play-state: running, running
-}
-
-.snowflake:nth-of-type(0) {
-  left: 1%;
-  -webkit-animation-delay: 0s, 0s;
-  animation-delay: 0s, 0s
-}
-
-.snowflake:nth-of-type(1) {
-  left: 10%;
-  -webkit-animation-delay: 1s, 1s;
-  animation-delay: 1s, 1s
-}
-
-.snowflake:nth-of-type(2) {
-  left: 20%;
-  -webkit-animation-delay: 6s, .5s;
-  animation-delay: 6s, .5s
-}
-
-.snowflake:nth-of-type(3) {
-  left: 30%;
-  -webkit-animation-delay: 4s, 2s;
-  animation-delay: 4s, 2s
-}
-
-.snowflake:nth-of-type(4) {
-  left: 40%;
-  -webkit-animation-delay: 2s, 2s;
-  animation-delay: 2s, 2s
-}
-
-.snowflake:nth-of-type(5) {
-  left: 50%;
-  -webkit-animation-delay: 8s, 3s;
-  animation-delay: 8s, 3s
-}
-
-.snowflake:nth-of-type(6) {
-  left: 60%;
-  -webkit-animation-delay: 6s, 2s;
-  animation-delay: 6s, 2s
-}
-
-.snowflake:nth-of-type(7) {
-  left: 70%;
-  -webkit-animation-delay: 2.5s, 1s;
-  animation-delay: 2.5s, 1s
-}
-
-.snowflake:nth-of-type(8) {
-  left: 80%;
-  -webkit-animation-delay: 1s, 0s;
-  animation-delay: 1s, 0s
-}
-
-.snowflake:nth-of-type(9) {
-  left: 90%;
-  -webkit-animation-delay: 3s, 1.5s;
-  animation-delay: 3s, 1.5s
-}
-
 .sapa {
   font-family: 'Dancing Script', cursive;
   font-size: 30px;
