@@ -61,7 +61,6 @@ h2 {
   background-image: linear-gradient(to bottom, #26BDA6, #FF9F65, #DED37E, #26BDA6);
   background-size: auto 150%;
   transition: background-position 0.5s;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 100px;
   background-position: 0 100%;
