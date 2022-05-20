@@ -7,11 +7,8 @@
 body {
   height: 900px;
   background-image: linear-gradient(to right, rgba(35, 131, 227, 0.681), rgba(237, 67, 214, 0.73));
-}
-
-body {
   font-family: 'Lato', sans-serif;
-  font-weight: 250;
+  font-weight: 700;
   font-size: 15px;
   line-height: 1.7;
   color: #eee;
@@ -19,16 +16,14 @@ body {
 
 .header {
   height: 90vh;
-  background-image: 
-  linear-gradient(to right bottom, 
-   rgba(76, 216, 255, 0.8),
-   rgba(30, 108, 217, 0.8)),
-   url('https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg');
-  
-background-size: cover;
+  background-image:
+    linear-gradient(to right bottom,
+      rgba(76, 216, 255, 0.8),
+      rgba(30, 108, 217, 0.8)),
+    url('https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg');
+  background-size: cover;
   background-position: top;
   position: relative;
-
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
@@ -38,7 +33,9 @@ background-size: cover;
   left: 40px;
 }
 
-.brand { font-size: 20px; }
+.brand {
+  font-size: 20px;
+}
 
 .text-box {
   position: absolute;
@@ -58,16 +55,17 @@ background-size: cover;
 
 .heading-primary-main {
   display: block;
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 1000;
   letter-spacing: 5px;
 }
 
 .heading-primary-sub {
+  padding-top: 1rem;
   display: block;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 7.4px;
+  letter-spacing: 2px;
 }
 
 .btn:link,
@@ -94,7 +92,7 @@ background-size: cover;
 .btn-white {
   background-color: #fff;
   color: #777;
-font-size: 14px;
+  font-size: 14px;
 }
 
 h3,
@@ -103,6 +101,7 @@ p {
   margin-bottom: 30px;
   line-height: 30px;
 }
+
 .sapa {
   font-family: 'Dancing Script', cursive;
   font-size: 30px;
@@ -112,13 +111,25 @@ p {
 .sapa-content {
   /*background-image: url('https://media-cdn-v2.laodong.vn/storage/newsportal/2021/12/28/989179/Anh-Tuyet.jpg');*/
   text-align: left;
-  padding-top: 2rem;
-  margin: 0 3rem;
+  margin: 0 10rem;
 }
 
 .SP {
-
-  display: block;
   text-align: center;
 
+}
+
+.content {
+  margin: 0 15rem;
+  text-align: center  ;
+}
+
+.content img {
+  width: 100%;
+}
+
+.content p {
+  font-size: 1.5rem;
+  padding: 0 3rem;
+  text-align: left;
 }
